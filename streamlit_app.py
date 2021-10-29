@@ -164,15 +164,15 @@ def main():
         ## Points to add 1. Make Backgroud Clear for Wordcloud 2. Remove keywords from Wordcloud
         
         
-        # Create a Worlcloud
-        if st.button("Get WordCloud for all things said about {}".format(Topic)):
-            st.success("Generating A WordCloud for all things said about {}".format(Topic))
-            text = " ".join(review for review in df.clean_tweet)
-            stopwords = set(STOPWORDS)
-            text_newALL = prepCloud(text,Topic)
-            wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
-            st.write(plt.imshow(wordcloud, interpolation='bilinear'))
-            st.pyplot()
+#         # Create a Worlcloud
+#         if st.button("Get WordCloud for all things said about {}".format(Topic)):
+#             st.success("Generating A WordCloud for all things said about {}".format(Topic))
+#             text = " ".join(review for review in df.clean_tweet)
+#             stopwords = set(STOPWORDS)
+#             text_newALL = prepCloud(text,Topic)
+#             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
+#             st.write(plt.imshow(wordcloud, interpolation='bilinear'))
+#             st.pyplot()
 
 
     if st.button("Exit"):
