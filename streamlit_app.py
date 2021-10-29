@@ -66,7 +66,7 @@ def main():
     def get_tweets(Topic,Count):
         i=0
         #my_bar = st.progress(100) # To track progress of Extracted tweets
-        for tweet in tweepy.Cursor(api.search_tweets, Topic, lang='en').items(10):
+        for tweet in tweepy.Cursor(api.search_tweets, Topic, lang='en').items(20):
             #time.sleep(0.1)
             #my_bar.progress(i)
             df.loc[i,"Date"] = tweet.created_at
