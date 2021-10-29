@@ -150,15 +150,14 @@ def main():
             st.pyplot()
         
         # Piechart 
-        if st.button("Get Pie Chart for Different Sentiments"):
-            st.success("Generating A Pie Chart")
-            a=len(df[df["Sentiment"]=="Positive"])
-            b=len(df[df["Sentiment"]=="Negative"])
-            c=len(df[df["Sentiment"]=="Neutral"])
-            d=np.array([a,b,c])
-            explode = (0.1, 0.0, 0.1)
-            plt.pie(d,shadow=True,explode=explode,labels=["Positive","Negative","Neutral"],autopct='%1.2f%%')
-            st.pyplot()
+        st.write("Pie Chart for Different Sentiments"):
+        a=len(df[df["Sentiment"]=="Positive"])
+        b=len(df[df["Sentiment"]=="Negative"])
+        c=len(df[df["Sentiment"]=="Neutral"])
+        d=np.array([a,b,c])
+        explode = (0.1, 0.0, 0.1)
+        plt.pie(d,shadow=True,explode=explode,labels=["Positive","Negative","Neutral"],autopct='%1.2f%%')
+        st.pyplot()
         
         
         ## Points to add 1. Make Backgroud Clear for Wordcloud 2. Remove keywords from Wordcloud
