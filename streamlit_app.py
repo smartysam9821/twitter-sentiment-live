@@ -143,7 +143,7 @@ def main():
 
         
         # get the countPlot
-        st.write("Count Plot for Different Sentiments")
+#         st.write("Count Plot for Different Sentiments")
         st.subheader(" Count Plot for Different Sentiments")
         sns.countplot(df["Sentiment"])
         st.pyplot()
