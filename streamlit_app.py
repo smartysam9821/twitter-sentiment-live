@@ -143,11 +143,10 @@ def main():
 
         
         # get the countPlot
-        if st.button("Get Count Plot for Different Sentiments"):
-            st.success("Generating A Count Plot")
-            st.subheader(" Count Plot for Different Sentiments")
-            sns.countplot(df["Sentiment"])
-            st.pyplot()
+        st.write("Get Count Plot for Different Sentiments")
+        st.subheader(" Count Plot for Different Sentiments")
+        sns.countplot(df["Sentiment"])
+        st.pyplot()
         
         # Piechart 
         st.write("Pie Chart for Different Sentiments")
@@ -164,14 +163,14 @@ def main():
         
         
         # Create a Worlcloud
-        if st.button("Get WordCloud for all things said about {}".format(Topic)):
-            st.success("Generating A WordCloud for all things said about {}".format(Topic))
-            text = " ".join(review for review in df.clean_tweet)
-            stopwords = set(STOPWORDS)
-            text_newALL = prepCloud(text,Topic)
-            wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
-            plt.imshow(wordcloud, interpolation='bilinear')
-            st.pyplot()
+        st.write("Get WordCloud for all things said about {}".format(Topic))
+        st.success("Generating A WordCloud for all things said about {}".format(Topic))
+        text = " ".join(review for review in df.clean_tweet)
+        stopwords = set(STOPWORDS)
+        text_newALL = prepCloud(text,Topic)
+        wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
+        plt.imshow(wordcloud, interpolation='bilinear')
+        st.pyplot()
 
 
     if st.button("Exit"):
