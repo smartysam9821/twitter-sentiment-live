@@ -143,13 +143,13 @@ def main():
 
         
         # get the countPlot
-        st.write("Get Count Plot for Different Sentiments")
+        st.success("Count Plot for Different Sentiments")
         st.subheader(" Count Plot for Different Sentiments")
         sns.countplot(df["Sentiment"])
         st.pyplot()
         
         # Piechart 
-        st.write("Pie Chart for Different Sentiments")
+        st.success("Pie Chart for Different Sentiments")
         a=len(df[df["Sentiment"]=="Positive"])
         b=len(df[df["Sentiment"]=="Negative"])
         c=len(df[df["Sentiment"]=="Neutral"])
@@ -163,7 +163,6 @@ def main():
         
         
         # Create a Worlcloud
-        st.write("Get WordCloud for all things said about {}".format(Topic))
         st.success("Generating A WordCloud for all things said about {}".format(Topic))
         text = " ".join(review for review in df.clean_tweet)
         stopwords = set(STOPWORDS)
