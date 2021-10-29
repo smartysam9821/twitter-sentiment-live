@@ -87,6 +87,7 @@ typed-ast==1.4.0
 tzlocal==2.1
 urllib3==1.25.10
 validators==0.18.1
+wordcloud
 watchdog==0.10.3
 wcwidth==0.2.5
 webencodings==0.5.1
