@@ -150,7 +150,7 @@ def main():
             st.pyplot()
         
         # Piechart 
-        st.write("Pie Chart for Different Sentiments"):
+        st.write("Pie Chart for Different Sentiments")
         a=len(df[df["Sentiment"]=="Positive"])
         b=len(df[df["Sentiment"]=="Negative"])
         c=len(df[df["Sentiment"]=="Neutral"])
