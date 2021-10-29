@@ -146,7 +146,7 @@ def main():
         if st.button("Get Count Plot for Different Sentiments"):
             st.success("Generating A Count Plot")
             st.subheader(" Count Plot for Different Sentiments")
-            st.write(sns.countplot(df["Sentiment"]))
+            sns.countplot(df["Sentiment"])
             st.pyplot()
         
         # Piechart 
@@ -157,7 +157,7 @@ def main():
             c=len(df[df["Sentiment"]=="Neutral"])
             d=np.array([a,b,c])
             explode = (0.1, 0.0, 0.1)
-            st.write(plt.pie(d,shadow=True,explode=explode,labels=["Positive","Negative","Neutral"],autopct='%1.2f%%'))
+            plt.pie(d,shadow=True,explode=explode,labels=["Positive","Negative","Neutral"],autopct='%1.2f%%'))
             st.pyplot()
         
         
@@ -171,7 +171,7 @@ def main():
             stopwords = set(STOPWORDS)
             text_newALL = prepCloud(text,Topic)
             wordcloud = WordCloud(stopwords=stopwords,max_words=800,max_font_size=70).generate(text_newALL)
-            st.write(plt.imshow(wordcloud, interpolation='bilinear'))
+            plt.imshow(wordcloud, interpolation='bilinear')
             st.pyplot()
 
 
